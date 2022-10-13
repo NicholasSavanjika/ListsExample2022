@@ -53,7 +53,8 @@ GamesList[GamesList.Count - 1] = "Call of Duty - Modern Warfare II";
 System.Console.WriteLine("------------------------------");
 
 // print Elements in a List and Array
-foreach(var game in GamesArray) {
+foreach (var game in GamesArray)
+{
     System.Console.WriteLine(game);
 }
 
@@ -117,3 +118,51 @@ foreach (var game in GamesList)
 {
     System.Console.WriteLine(game);
 }
+
+
+// Exercises
+// 
+// 1. Create a program that reads in 5 names from the console. It then prints out "Hello <name>" for all the names entered
+// 2. A program starts with the values 34, 5, 67, 1, 99, 34, 44, 78, 34, 0. Write a program that adds all numbers together and outputs the total.
+// 3. Write a program that reads in 5 numbers. It then asks the user for another number and outputs whether the number has already been entered.
+// 4. As above except the program will tell the user how many times a repeated number has been entered
+// 5. A program stores words read from console, until the word "stop" is entered. It then outputs the words entered in reverse order.
+
+void Ex1()
+{
+    System.Console.WriteLine("================= Ex1 =========================");
+    var numTimes = 5;
+    List<string> Names = new List<string>();
+
+    for (var i = 0; i < numTimes; i++)
+    {
+        System.Console.WriteLine("Please enter a name: ");
+        Names.Add(Console.ReadLine());
+    }
+
+    foreach (var name in Names) 
+    {
+        System.Console.WriteLine("Hello " + name);
+    }
+}
+
+Ex1();
+
+void Ex2() {
+
+    System.Console.WriteLine("================= Ex2 =========================");
+    List<int> Numbers = new List<int>() { 34, 5, 67, 1, 99, 34, 44, 78, 34, 0 };
+    var numTotal = 0;
+
+    foreach (var num in Numbers) {
+        // numTotal = numTotal + num;
+        numTotal += num;
+    }
+
+    // We could cheat and use the below...but we won't just yet >:)
+    // numTotal = Numbers.Sum();
+
+    System.Console.WriteLine(numTotal);
+}
+
+Ex2();
