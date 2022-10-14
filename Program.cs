@@ -231,3 +231,26 @@ void Ex4(){
 }
 
 Ex4();
+
+void Ex5(){
+
+    List<string> WordsList = new List<string>();
+    System.Console.WriteLine("Type out any words you want, type 'Stop' to stop and list your words in reverse order");
+    string userword = System.Console.ReadLine();
+    
+    while (userword != "Stop") {
+        WordsList.Add(userword);
+        System.Console.WriteLine("Write another word");
+        userword = System.Console.ReadLine();
+    }
+
+    WordsList.Reverse();
+    System.Console.WriteLine("-----------Reversed List-------------------");
+    foreach (var word in WordsList)
+    {
+        System.Console.WriteLine(word);
+    }
+
+}
+
+Ex5();
