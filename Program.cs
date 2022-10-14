@@ -166,3 +166,34 @@ void Ex2() {
 }
 
 Ex2();
+
+void Ex3(){
+
+    System.Console.WriteLine("================= Ex3 =========================");
+    var num = 5;
+    List<string> Numbers = new List<string>();
+    for (var i = 0; i < num; i++)
+    {
+        System.Console.WriteLine("Please enter a number: ");
+        Numbers.Add(Console.ReadLine());
+    }
+
+    System.Console.WriteLine("Please enter a number to check if it's in the list:");
+    string usernum = Console.ReadLine();
+
+    bool checkForMatch = false;
+    foreach (var number in Numbers) {
+        if (number == usernum) {
+            checkForMatch = true;
+        }
+    }
+    if (checkForMatch == true){
+        System.Console.WriteLine("That number is already in the list");
+    }
+    else {
+        System.Console.WriteLine("That number is not in the list");
+    }
+
+}
+
+Ex3();
