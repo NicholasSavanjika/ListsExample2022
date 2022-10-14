@@ -197,3 +197,37 @@ void Ex3(){
 }
 
 Ex3();
+
+void Ex4(){
+
+    System.Console.WriteLine("================= Ex4 =========================");
+    var num = 5;
+    List<string> Numbers = new List<string>();
+    for (var i = 0; i < num; i++)
+    {
+        System.Console.WriteLine("Please enter a number: ");
+        Numbers.Add(Console.ReadLine());
+    }
+
+    System.Console.WriteLine("Please enter a number to check if it's in the list:");
+    string usernum = Console.ReadLine();
+
+    bool checkForMatch = false;
+    int numberOfMatches = 0;
+    foreach (var number in Numbers) {
+        if (number == usernum) {
+            checkForMatch = true;
+            numberOfMatches ++;
+        }
+    }
+    if (checkForMatch == true){
+        System.Console.WriteLine("That number has been entered in the list " + numberOfMatches + " times");
+
+    }
+    else {
+        System.Console.WriteLine("That number is not in the list");
+    }
+
+}
+
+Ex4();
